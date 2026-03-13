@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7401760fdea1e9741b4e32b0fd7532eb, type: 3}
+  m_Name: GridMapConfig
+  m_EditorClassIdentifier: Assembly-CSharp::GridMapConfig
+  columns: 8
+  rows: 8
+  tilePrefab: {fileID: 6959574441664539384, guid: 3c6e3f8542e89134ea0bca6885216f7b,
+    type: 3}
+  tileSize: {x: 1, y: 1}
+  spacing: {x: 1, y: 1}
+  pivotIsCenter: 1
+  origin: {x: 0, y: 0, z: 0}
+  uniformScale: 1
+  randomizeHeight: 0
+  heightRange: 0.2
+  randomSeed: 1234

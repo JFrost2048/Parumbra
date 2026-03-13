@@ -1,0 +1,122 @@
+{
+    "version": 1,
+    "name": "UI",
+    "maps": [
+        {
+            "name": "NLPBreaker",
+            "id": "f31d443d-6ccf-4290-92f5-480f9a710f1b",
+            "actions": [
+                {
+                    "name": "Tab",
+                    "type": "Button",
+                    "id": "eabe01b2-15ea-463e-b8d0-9382fa0fda95",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "a957d118-0961-4ce7-81a1-9df837dd2b86",
+                    "path": "<Keyboard>/tab",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Tab",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1df0a17a-f918-42af-9acc-145d7efeed9e",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Tab",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "MainBT",
+            "id": "2dc5ce8d-2afd-4919-9f35-ad6f4e31d916",
+            "actions": [
+                {
+                    "name": "Skip",
+                    "type": "Button",
+                    "id": "9f8f18ec-66c9-4379-a9ed-d00117ea4fb7",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "UIHide",
+                    "type": "Button",
+                    "id": "607cf866-a46e-4b58-ae37-a0d64c79e737",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "e1342ce1-ffcd-4b87-bc8d-361719b56aa1",
+                    "path": "<Keyboard>/#(Z)",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Skip",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "076f5e57-0b68-4101-a896-805c7892dda1",
+                    "path": "<Keyboard>/#(H)",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "UIHide",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "AnyKey",
+            "id": "2874da2d-bb04-4f0f-8192-368a7190eca7",
+            "actions": [
+                {
+                    "name": "Any Key",
+                    "type": "Button",
+                    "id": "ae5d76e9-2d4d-4e46-87ba-1bc14d713f6b",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "2db18991-dbd7-4561-8e66-0917f68b4148",
+                    "path": "<Keyboard>/anyKey",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Any Key",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

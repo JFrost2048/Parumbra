@@ -1,0 +1,3577 @@
+{
+  
+"profile": {
+    "name": "기본 정보",
+    "maxSelect": 1,
+    "elements": [
+      {
+        "id": "base_info",
+        "type": "group",
+        "fields": [
+          {
+            "type": "text",
+            "label": "이름",
+            "variable": "player_name"
+          },
+          {
+            "type": "appearanceSelect",
+            "label": "외관",
+            "variable": "appearance",
+            "options": [
+              {
+                "label": "기본 외형",
+                "image": "/image/standing/joe/deafult.png"
+              },
+              {
+                "label": "사용자 업로드",
+                "value": "custom",
+                "imageUpload": true
+              }
+            ]
+          },
+          {
+            "type": "select",
+            "label": "성별",
+            "variable": "appearance",
+            "options": ["남성", "여성"]
+          }
+        ]
+      }
+    ]
+  },
+
+  "born": {
+    "name": "출신",
+    "description": "인류는 먼 별로 나아갔고, 각자의 방식으로 새로운 터전을 만들어냈습니다. 당신이 태어나고 자란 환경은 당신의 성격과 가치관, \n기술, 그리고 그 운명까지 결정짓는 중요한 뿌리가 됩니다.\n\n테페의 문명화된 도시 속 엘리트부터 레바브의 무너진 궤도 엘리베이터의 잔해 속에서 살아남은 사람들, \n소행성 지대 아스트로이드 덴의 무중력 속 범죄와 생존의 현장, 중금속 화산과 노동자의 투쟁이 함께 공존하는 테르마까지—.\n\n각 세계마다 살아남은 사람들의 이야기가 있으며, 각자의 삶 속에서 길러진 기술과 습관은 당신에게 \n다른 이들이 가지지 못한 독특한 장점과 단점을 부여할 것입니다.\n\n신중히 선택하십시오. 당신의 선택은 이제 막 시작된 이 이야기가 어떤 모습으로 펼쳐질지 결정할 것입니다.",
+    "elements": [
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "출신"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "테페_(Tepe)",
+            "hidden": true
+          }
+        ],
+        "title": "테페 (Tepe)",
+        "text": "성간 파종선 데메테르 6호의 불시착으로 탄생한, 인류 최초의 정착도시.\n테페인들은 자신들이 문명의 시작점이라는 강한 자부심을 가지고 있습니다.\n초기 함선에서 확보된 유전자 조작 기술은 우주 개척의 발판이 되었지만,\n시간이 흐르며 ‘마쉬아흐’라 불리는 계급이 그 기술을 독점하게 되었습니다.\n유전적으로 설계된 엘리트들과, 제한된 개입만 허락받은 일반 시민들 사이의 격차는 날로 커져만 갑니다.",
+        "width": 25,
+        "image": "/image/choies/R8C1.webp",
+        "addon" : "의지 특성 획득",
+        "type": "button",
+        
+        "actionType": "toggle",
+        "linked": [
+          "의지"
+        ]
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "출신"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "레바브_(Lebab)",
+            "hidden": true
+          }
+        ],
+        "title": "레바브 (Lebab)",
+        "text": "레바브는 군도형 행성입니다.\n궤도 엘리베이터를 통해 주변 항성계와 물자를 중계하며 무역의 중심지로 급부상했지만, \n짧은 황금기는 엘리베이터 붕괴 테러로 인해 막을 내리게 되었습니다.\n당시의 참사는 도시 대부분을 휩쓸었고, 지금도 궤도 상층에는 파편이 떠돌며 주기적으로 재난을 유발합니다.\n생존자들은 잃어버린 일상을 복구해가고 있지만,\n누군가는 여전히 가해자를 찾고 있습니다.",
+        "width": 25,
+        "image": "/image/choies/R8C2.webp",
+        "addon" : "조종 특성 획득",
+        "type": "button",
+        "actionType": "toggle",
+        "linked": [
+          "조종"
+        ]
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "출신"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "아룬_(Arun)",
+            "hidden": true
+          },
+          {
+            "type": "discount",
+            "targets": ["[VEIN-4] 바이탈 측정기", "케르베로스 호흡장치","[LUX-3] 정서 반응 측정 드론", "[AIDOS-SC] 동작 감지기","용접기","NAIV"],
+            "value": -3
+          },
+          {
+            "type": "discount",
+            "targets": ["의료 키트","신경 안정제","기절 수류탄","조명탄","마스터 키","현장 분석 키트"],
+            "value": -2
+          }
+        ],
+        "title": "아룬 (Arun)",
+        "text": "아룬은 황량한 사막으로 뒤덮인 불모의 행성입니다.이곳은 성간 파종선 디스페이터가 불시착한 곳으로, 데메테르와 달리 군용 장비를 대량으로 적재하고 있던 것이 확인되었습니다.\n함선은 현재 모래 아래에 매몰된 채 침묵하고 있으며, 소수의 디스페이터 후손들이 함선의 존재를 은폐하며 저항 중입니다.\n그러나 동형 함선 페르세포네의 AI가 더 이상 인류의 호출에 응답하지 않는 지금, 디스페이터에 대한 조사는 무시할 수 없는 우선 과제가 되었습니다.",
+        "width": 25,
+        "image": "/image/choies/R8C3.webp",
+        "addon" : "장비 50% 할인",
+        "type": "button",
+        "actionType": "toggle"
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "출신"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "테르마_(Therma)",
+            "hidden": true
+          }
+        ],
+        "title": "테르마 (Therma)",
+        "text": "테르마는 강한 중력과 격렬한 화산 활동이 공존하는 고밀도 행성입니다.\n맨틀에 다량의 고밀도 금속 원소가 포함되어 있어, 중력이 비정상적으로 강하며, 이로 인해 행성 전체가 끊임없이 뒤틀리고 흔들립니다.\n빈번하게 분출되는 화산은 고농도의 텅스텐을 방출하며, 테르마를 은하계에서도 손꼽히는 광업 거점으로 만들었습니다.\n그러나 고열, 중금속 중독, 불안정한 지반, 높은 사망률과 반복되는 사고는 이곳에 끝없는 갈등의 불씨를 남기고 있습니다.",
+        "width": 25,
+        "image": "/image/choies/R8C4.webp",
+        "addon" : "카-본 특성 획득",
+        "type": "button",
+        "actionType": "toggle",
+        "linked": [
+          "카-본"
+        ]
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "출신"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "엘리시온_(Elysion)",
+            "hidden": true
+          }
+        ],
+        "title": "엘리시온 (Elysion)",
+        "text": "엘리시온은 울창한 정글과 밀림으로 뒤덮인 개척 초기 행성입니다.\n대기와 토양은 안정적이지만, 이곳의 생태계는 기존 생물학 이론을 비웃듯 인류가 아직 파악하지 못한 방식으로 작동합니다.\n신비롭고 치명적인 식생, 변화무쌍한 포식자들, 끊임없이 변하는 생태권의 경계.\n이곳에서 살아남는다는 것은, 단지 환경에 적응하는 것이 아니라 다시금 먹이사슬 속에서 자신을 증명하는 일입니다.",
+        "width": 25,
+        "image": "/image/choies/R8C5.webp",
+        "addon" : "생존 특성 획득",
+        "type": "button",
+        "actionType": "toggle",
+        "linked": [
+          "생존"
+        ]
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "출신"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "아스트로이드_덴_(Asteroid_Den)",
+            "hidden": true
+          }
+        ],
+        "title": "아스트로이드 덴 (Asteroid Den)",
+        "text": "폐기된 함선과 소행성 조각을 이어붙여 만든 거주지입니다.\n본래는 외성계 조선소로 개발될 예정이었으나, 물류 거점이었던 레바브의 몰락 이후 계획이 무산되었고, 곧 불법 정착민과 도망자들이 몰려들며 무법지대로 변했습니다.\n지금의 덴은 각 세력의 구역들로 나뉜 뒤얽힌 모듈의 복합체이며, 각종 밀수, 해킹, 사적 복수 등 이 이루어지는 활발한 지하경제의 중심지입니다.\n특히 용병 산업이 발달하여, 이곳을 거쳐 간 자들의 이름은 항상 어딘가에서 회자되고 있습니다.",
+        "width": 25,
+        "image": "/image/choies/R8C6.webp",
+        "addon" : "밀수 특성 획득\n낮은 골밀도 결점 획득",
+        "type": "button",
+        "actionType": "toggle",
+        "linked": [
+          "밀수",
+          "낮은 골밀도"
+        ]
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "출신"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "아르고_(Argo)",
+            "hidden": true
+          }
+        ],
+        "title": "아르고 (Argo)",
+        "text": "아르고는 인류 개척 초기,\n디스페이터의 신호를 추적하기 위해 발사된 세대 비행선입니다. 태양광 추진형 솔라 세일 함선이었던 아르고는 세대를 이어가며 항해할 수 있도록 설계되었지만,\n아룬으로 향하던 도중 내전과 노후화로 인해 생존 시스템이 붕괴되었고, 기아를 극복하기 위해 채내 염흑소를 합성하며, 연명하였습니다.\n긴 여정 끝에 아룬에 도착했을 때, 이미 도착을 한 후손들은 아르고인을 [지체된 인류]라 부르며 행성 거주를 거부했습니다.",
+        "width": 25,
+        "image": "/image/choies/R8C7.webp",
+        "addon" : "우주 공학, 광합성 특성 획득\n약물 거부 결점 획득",
+        "type": "button",
+        "actionType": "toggle",
+        "linked": [
+          "우주공학",
+          "광합성",
+          "약물 거부"
+        ]
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "출신"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "지구",
+            "hidden": true
+          }
+        ],
+        "title": "지구",
+        "text": "오랜 세월이 흐른 지금도, 간혹 파손된 선체 속에서 동면 중인 지구인이 발견됩니다.\n대부분은 기억을 잃은 채 깨어나며, 소수만이 희미한 과거의 파편을 간직하고 있을 뿐입니다.\n그러나 [지구] 라는 이름이 여전히 상징성을 지니고 있는 탓에, 원치 않은 환영 속에 내던져집니다.\n\n그 환영은 때로 존경이지만, 감시이며,\n 왜곡된 향수입니다.",
+        "width": 25,
+        "image": "/image/choies/R8C8.webp",
+        "type": "button",
+        "actionType": "toggle"
+      }
+    ],
+    "maxSelect": 1,
+    "required": 1
+  },
+  "job": {
+    "name": "직업",
+    "description": "당신은 고된 탐사선의 일원이며, 각자의 전문성은 생존과 임무 수행에 반드시 필요한 역할을 담당합니다.\n\n그 누구도 혼자 살아남을 수 없습니다. 누군가는 앞장서야 하고, 누군가는 끝까지 남아야 합니다.\n\n지금, 당신의 전문 분야를 선택하십시오.\n이것은 단지 능력의 차이가 아니라, 책임의 종류를 고르는 일입니다.",
+    "elements": [
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "직업"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "용병",
+            "hidden": true
+          }
+        ],
+        "title": "용병",
+        "text": "항성 간 이주가 본격화되면서, 외곽 개척지와 자원 수송선은 \n지속적으로 공격의 표적이 되었습니다.\n법의 손이 닿지 않는 구역에서는, 결국 총을 든 계약자가 필요해졌습니다.\n\n용병은 자산 보호, 대상 제거, 수색 및 구조 등의 임무를 수행합니다.\n의뢰에 따라 역할은 달라지며, 실행 방식은 정해져 있지 않습니다.\n\n한때는 군 출신이 주류를 이뤘지만, 현재는 보안 전문가, 무기 설계자, 드론 운용사 등 다양한 전문 인력이 이 분야에 참여하고 있습니다.\n\n신뢰할 수 있는 무장력,\n단지 그 한 줄의 평판만이 이 업계의 통화입니다.",
+        "width": 30,
+        "image": "/image/choies/R9C2.webp",
+        "type": "button",
+        "actionType": "toggle",
+        "addon" : "고위력 무기 접근 권환 획득\n기절 수류탄 장비 획득",
+        "linked": [
+          "케르베로스 호흡장치",
+          "기절 수류탄"
+        ]
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "직업"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "과학장교",
+            "hidden": true
+          }
+        ],
+        "title": "과학장교",
+        "text": "과학자는 잊힌 세계를 향해 단서를 거꾸로 추적하는 자입니다.\n\n그들은 불완전한 기록, 제한된 자원, 그리고 자신의 직관에만 의존한 채, 매번 하나의 이론을 만들고, 하나의 증거를 잃습니다.\n\n탑승 목적은 대개 자원 탐색이나 특이현상 분석이지만, 대부분의 과학자는 결국 하나의 질문으로 되돌아갑니다.\n\n**우리는 어디서 왔는가?**\n\n‘침묵’ 이후 지구에 대한 모든 직접적 자료는 사라졌습니다. 그들은 무게, 시간, 길이… 기준이 되지 못한 단위들을 다시 기준으로 삼아, 잃어버린 고향을 찾고 있습니다.",
+        "width": 30,
+        "image": "/image/choies/R9C3.webp",
+        "type": "button",
+        "actionType": "toggle",
+        "addon" : "조사 특성 획득\n현장 분석 키트 장비 획득>",
+        "linked": [
+          "조사",
+          "현장 분석 키트",
+          "[AIDOS-SC] 동작 감지기"
+        ]
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "직업"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "의무병",
+            "hidden": true
+          }
+        ],
+        "title": "의무병",
+        "text": "테라포밍 중단 지역, 붕괴된 도시, 격리되지 않은 병원체.\n필요한 현장은 점점 늘어났지만, 의료 체계는 이를 따라가지 못했습니다.\n\n전투의무관은 병원이 아닌 전장에 배치된 의료 인력입니다.\n이들은 제한된 자원과 시간 속에서, 누구를 살릴 수 있을지 판단하고, \n누구에게는 고통을 줄이는 처치를 선택해야 합니다.\n\n전투의무관은 명망 높은 직책으로 여겨지지만,\n그 결정은 종종 감사와 원망을 동시에 불러옵니다.\n\n그들은 기적을 요구받지만, 모든 현장에서 기적을 남길 수는 없습니다.",
+        "width": 30,
+        "image": "/image/choies/R9C5.webp",
+        "type": "button",
+        "actionType": "toggle",
+        "addon" : "의료학 특성 획득\n의료 키트 획득",
+        "linked": [
+          "의료학",
+          "의료 키트",
+          "[VEIN-4] 바이탈 측정기"
+        ]
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "직업"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "심리학자",
+            "hidden": true
+          }
+        ],
+        "title": "심리학자",
+        "text": "심리학자는 항해 중 선원의 정신을 관찰하고 조정하는 전문 인력입니다.\n\n동면 전후의 기억 복원, 고립 환경에서의 스트레스, 감각 정보의 왜곡 등\n우주에서는 일상적인 요인들이 치명적인 영향을 줄 수 있습니다.\n\n심리학자는 주기적인 심층 상담과 신경 생체 데이터를 병행 분석하며, 필요시 감정 반응을 추적하는 드론을 활용합니다. 이 과정에서 피 관찰자에게 감시받는다는 인식을 유발할 수 있습니다.\n\n선원들은 이들을 ‘동행자’ 혹은 ‘감시자’로 부르며, 신뢰와 경계의 대상으로 불립니다.\n그러나 심리학자의 개입이 없다면, 고립된 인간 정신은 내부에서부터 붕괴하기 시작합니다.",
+        "width": 30,
+        "image": "/image/choies/R9C6.webp",
+        "type": "button",
+        "actionType": "toggle",
+        "addon" : "심리학 특성 획득\n신경 안정제 획득",
+        "linked": [
+          "심리학",
+          "신경 안정제",
+          "[LUX-3] 정서 반응 측정 드론"
+        ]
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "직업"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "해커",
+            "hidden": true
+          }
+        ],
+        "title": "해커",
+        "text": "해커는 침묵 이전의 기술 유산을 분석하고 복원하는 역할을 수행합니다.\n‘침묵’ 이후, 인류는 고도화된 기계의 작동 원리를 이해하지 못하게 되었으며,\n많은 시스템은 자율성과 명확성을 상실한 채 봉인되었습니다.\n\n해커는 이러한 잔재를 조사하여 동작 구조를 역추적하고,\n예측 가능한 모든 조건을 사전에 정의함으로써 새로운 기능을 구성합니다.\n인공지능의 도움 없이 이 과정을 반복하기 위해서는,\n고도의 분석력과 축적된 직관이 요구됩니다.\n\n그들의 손길이 닿기 전까지,\n모든 기계는 단지 묘비일 뿐입니다.",
+        "width": 30,
+        "image": "/image/choies/R9C1.webp",
+        "type": "button",
+        "actionType": "toggle",
+        "addon" : "\n해킹특성 획득\n마스터 키 장비 획득",
+        "linked": [
+          "해킹",
+          "마스터 키",
+          "NAIV"
+        ]
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "직업"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "정비병",
+            "hidden": true
+          }
+        ],
+        "title": "정비병",
+        "text": "모두가 동면에 들어갈 때, 그들은 깨어 있습니다.\n\n방사선, 진공, 극한의 온도차.\n긴 항해 동안 선체는 서서히 부식되고, 구조는 피로에 갈라집니다.\n부품은 제때 오지 않기에, 버려진 기계에서 미래를 추출해야 합니다. \n가끔은, 정비보다 창작에 가깝습니다.\n\n반복되는 깨어남과 잠듦은 몸을 망가뜨리고, 정신을 무디게 만듭니다. 그들의 피로 한계는 곧 함선 전체의 항행 거리로 기록됩니다.\n\n당신이 발을 딛고 있는 금속판 아래,\n그들이 이미 세 번은 깨어났다는 걸 기억하십시오.",
+        "width": 30,
+        "image": "/image/choies/R9C4.webp",
+        "type": "button",
+        "actionType": "toggle",
+        "addon" : "\n우주공학 특성 획득\n조명탄 장비 획득",
+        "linked": [
+          "우주공학",
+          "용접기",
+          "조명탄"
+        ]
+      }
+    ],
+    "maxSelect": 1,
+    "required": 1
+  },
+  "background": {
+    "name": "배경",
+    "description": "사람이 먼 곳으로 떠나는 데에는 반드시 이유가 있습니다.\n누군가는 지시를 받았고, 누군가는 자발적으로 떠났으며, 어떤 이는 자신조차도 이유를 모른 채 눈을 떴습니다.\n기억은 무뎌지고, 동기는 변질되며, 진실은 늘 가장 늦게 도착합니다.\n\n이 항해는 단지 목적지를 향하는 여정이 아니라, 당신이 왜 이곳에 있는지를 되묻는 여정이 될 것입니다.\n과연, 당신을 여기로 이끈 **‘진짜 이유’**는 무엇입니까?",
+    "elements": [
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "배경"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "연구",
+            "hidden": true
+          },
+          {
+            "type": "discount",
+            "targets": ["생명공학","외계학"],
+            "value": -2
+          }
+        ],
+        "title": "연구",
+        "text": "발명할 것도, 시도할 것도,\n이미 누군가 다 해버렸다고요? \n괜찮습니다.\n\n하늘 아래 새로운 것이 없다면,\n이제는 그 하늘을 다시 정의할 시간입니다.",
+        "width": 30,
+        "image": "/image/choies/R10C1.webp",
+        "addon" : "생명 공학, 외계학 50% 할인",
+        "type": "button",
+        "actionType": "toggle"
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "배경"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "돈",
+            "hidden": true
+          },
+          {
+            "type": "setValue",
+            "target": "point",
+            "value": "2"
+          }
+        ],
+        "title": "돈",
+        "text": "할 수 있는 게 몇 개 없었습니다.\n배운 건 손에 기름 묻히는 법이고,\n허락된 일은 언제나 가장 위험한 거였습니다.\n다행히, 이 일은 목숨값이라도 쳐주더군요.",
+        "width": 30,
+        "image": "/image/choies/R10C2.webp",
+        "type": "button",
+        "actionType": "toggle"
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "배경"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "요양",
+            "hidden": true
+          },
+          {
+            "type": "discount",
+            "targets": ["중력 멀미","터널 시야","심우주 공포증","낮은 골밀도","수면 장애","중독","냉소주의자","이인증","과소비","생존 본능","트라우마","약물 거부","온도 민감성","인간불신","무모함","복수귀","고집불통","광장 공포증","폐쇄 공포증","죽음충동"],
+            "value": -2
+          }
+        ],
+        "title": "요양",
+        "text": "고통은 치료되지 않았고,\n투쟁은 기억조차 희미해졌습니다.\n이제는 단지 멀리 가고 싶을 뿐이었습니다.\n이 저주받은 항해조차 피난처처럼 느껴졌다면, \n그만큼 망가졌다는 뜻이겠죠.\n\n<i><b>각 결점 마다 추가 2 포인트 획득</i></b>",
+        "width": 30,
+        "image": "/image/choies/R10C3.webp",
+        "type": "button",
+        "actionType": "toggle"
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "배경"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "도피",
+            "hidden": true
+
+          }
+        ],
+        "title": "도피",
+        "text": "돌아갈 수 없었습니다.\n그리고 숨을 수 있는 곳도 얼마 남지 않았죠.\n이 항해는 마지막 피난처였고,\n얼마나 오래 숨을 수 있을지는…\n아무도 모릅니다.\n\n<i><b>은밀 특성 획득</i></b>",
+        "width": 30,
+        "image": "/image/choies/R10C4.webp",
+        "type": "button",
+        "actionType": "toggle",
+        "linked": [
+          "은밀"
+        ]
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "배경"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "빚",
+            "hidden": true
+          }
+        ],
+        "title": "빚",
+        "text": "액수는 중요하지 않습니다.\n그걸 갚을 수 없다는 게 중요하죠.\n재산, 이름, 심지어 신체까지 담보로 잡혔지만,\n이 항해가 마지막 협상안이었습니다\n\n<i><b>설득 특성 획득</i></b>",
+        "width": 30,
+        "image": "/image/choies/R10C5.webp",
+        "type": "button",
+        "actionType": "toggle",            
+        "linked": [
+          "설득"
+        ]
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "배경"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "운명",
+            "hidden": true
+          },
+          {
+            "type": "setValue",
+            "target": "will",
+            "value": "13",
+            "hidden": true
+          }
+        ],
+        "title": "운명",
+        "text": "설명할 수 없었습니다.\n하지만, 이상하리만치 익숙하고, \n피할 수 없는 것이었습니다.\n\n그곳에 당신을 기다리는 무언가가 있다고,\n아주 오래전부터 정해져 있었던 것처럼.",
+        "width": 30,
+        "image": "/image/choies/R10C6.webp",
+        "type": "button",
+        "actionType": "toggle"
+      }
+    ],
+    "required": 1,
+    "maxSelect": 1
+  },
+  "trail": {
+    "name": "재능",
+    "description": "우연은 반복되면 패턴이 되고, 재능은 그 틈에서 고개를 듭니다.\n누구나 훈련받을 수는 있지만, 끝내 닿지 못하는 경지가 있습니다.\n이곳에 도달한 자들에겐 각자의 날카로운 단면이 있었고, 그 차이는 생존의 순간에 빛납니다.\n\n때로는 단순한 직감,\n때로는 계산되지 않은 선택이\n한 세계의 운명을 바꿉니다.\n\n당신에게 새겨진 흔적은 무엇입니까?",
+    "elements": [
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "재능"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "생명공학",
+            "hidden": true
+          },
+          {
+            "type": "setValue",
+            "target": "point",
+            "value": "-4"
+          }
+        ],
+        "title": "생명공학",
+        "text": "각종 생물체의 생체, 유전자 등을 연구하고 수정하는 기술입니다. 돌연변이를 일으키거나 부정적인 특성을 제어하고 새로운 종류의 생물체를 분석할 수 있습니다.",
+        "width": 25,
+        "addon" : "GATTACA... 좀 지루한가요?\n알파벳 한 두개 정도 추가해 보죠.",
+        "image": "/image/choies/R11C1.webp",
+        "type": "button",
+        "actionType": "toggle"
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "재능"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "우주공학",
+            "hidden": true
+          },
+          {
+            "type": "setValue",
+            "target": "point",
+            "value": "-5"
+          }
+        ],
+        "title": "우주공학",
+        "text": "우주선, 위성, 행성간 시스템과 같은 우주 관련 기술을 이해하고 다루는 전문적 지식입니다. 손상된 엔진을 수리하거나, 우주 환경에서 작동하는 장비를 즉석에서 제작하는 등 우주 개척에 필요한 기술의 기반입니다.",
+        "width": 25,
+        "image": "/image/choies/R11C2.webp",
+        "addon" : "나사를 하나 더 조인 이유는,\n수천 톤의 함체가 수백 년 후에도\n숨 쉬기 위함이었다.",
+        "type": "button",
+        "actionType": "toggle"
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "재능"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "의료학",
+            "hidden": true
+          },
+          {
+            "type": "setValue",
+            "target": "point",
+            "value": "-4"
+          }
+        ],
+        "title": "의료학",
+        "text": "질병의 원인을 진단하거나, 위급한 상황에서 응급 처치 혹은 복잡한 수술을 진행하는 등 의학적 지식과 처치에 대한 기술 입니다. 현대 의학부터 민간요법까지 다양한 치료 방식을 포함할 수 있습니다.",
+        "width": 25,
+        "image": "/image/choies/R11C3.webp",
+        "addon" : "인간에 대한 사랑이 있는 곳에\n 의술에 대한 사랑이 있다.",
+        "type": "button",
+        "actionType": "toggle"
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "재능"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "사격",
+            "hidden": true
+          },
+          {
+            "type": "setValue",
+            "target": "point",
+            "value": "-5"
+          },
+          {
+            "type": "setValue",
+            "target": "crit",
+            "value": "10" 
+          },
+          {
+            "type": "setValue",
+            "target": "aim",
+            "value": "2"
+          }
+        ],
+        "title": "사격",
+        "text": "권총부터 시작해서 소총, 저격총, 대전차 미사일까지 모든 종류의 화기에 대한 숙련을 얻습니다. 시대와 종류를 초월한 무기들이 춤추는 아룬에선 훌륭한 교보재들이 널려있는 편이죠.",
+        "width": 25,
+        "image": "/image/choies/R11C4.webp",
+        "addon" : "모든 전쟁은 내전이다.\n모든 사람은 형제니까.",
+        "type": "button",
+        "actionType": "toggle"
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "재능"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "은밀",
+            "hidden": true
+          },
+          {
+            "type": "setValue",
+            "target": "point",
+            "value": "-3"
+          }
+        ],
+        "title": "은밀",
+        "text": "눈에 띄지 않게 행동하고 흔적을 남기지 않는 기술입니다. 경비를 피해 제한 구역에 침입하거나,  추적자를 따돌리는 상황에 숙련됩니다.",
+        "width": 25,
+        "image": "/image/choies/R11C5.webp",
+        "addon" : "당신의 전쟁,\n 우리의 사업",
+        "type": "button",
+        "actionType": "toggle"
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "재능"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "리더쉽",
+            "hidden": true
+          },
+          {
+            "type": "setValue",
+            "target": "point",
+            "value": "-3"
+          }
+        ],
+        "title": "리더쉽",
+        "text": "집단을 효과적으로 이끌고 영감을 주어 최상의 성과를 이끌어내는 지휘 기술입니다. 혼란스러운 상황에서 질서를 유지하고, 동료들이 당신의 지시를 얼마나 충실히 따르는지 결정하는 척도입니다.",
+        "width": 25,
+        "image": "/image/choies/R11C6.webp",
+        "addon" : "\"손자 분 이세요? 대려오긴 좀 위험한데...\"\n\"이놈도 이젠 다 컷지 뭘, 맞길 곳도 없고\"",
+        "type": "button",
+        "actionType": "toggle"
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "재능"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "조사",
+            "hidden": true
+          },
+          {
+            "type": "setValue",
+            "target": "point",
+            "value": "-3"
+          }
+        ],
+        "title": "조사",
+        "text": "현장을 분석하고 해석하는 능력입니다.\n사방이 전쟁터인 아룬에서  유물을 찾아 함선의 잔해에 들락거리는 해커들에겐 기본 소양으로 여겨집니다.",
+        "width": 25,
+        "image": "/image/choies/R11C7.webp",
+        "addon" : "장갑차인가? 전투기? 뭐든 동작만 한다면,\n나도 이제 자유의 몸이...!",
+        "type": "button",
+        "actionType": "toggle"
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "재능"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "곡예",
+            "hidden": true
+          },
+          {
+            "type": "setValue",
+            "target": "point",
+            "value": "-3"
+          }
+        ],
+        "title": "곡예",
+        "text": "신체의 유연성, 균형감각, 정교한 움직임을 활용하는 물리적 기술입니다 구속에서 벗어나기 위해 몸을 비틀거나, 공중제비와 같은 화려한 동작을 수행할 수 있습니다.",
+        "width": 25,
+        "image": "/image/choies/R11C8.webp",
+        "addon" : "낙하하는 화물들은 주인이 없었고,\n보통은 곧 그녀가 되었다.",
+        "type": "button",
+        "actionType": "toggle"
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "재능"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "설득",
+            "hidden": true
+          },
+          {
+            "type": "setValue",
+            "target": "point",
+            "value": "-3"
+          }
+        ],
+        "title": "설득",
+        "text": "논리, 감성, 공감을 통해 상대방의 생각과 행동을 원하는 방향으로 이끌어내는 능력입니다.",
+        "width": 25,
+        "image": "/image/choies/R11C9.webp",
+        "addon" : "박하게 제시하고, 후하게 대접하라",
+        "type": "button",
+        "actionType": "toggle"
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "재능"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "조종",
+            "hidden": true
+          },
+          {
+            "type": "setValue",
+            "target": "point",
+            "value": "-3"
+          }
+        ],
+        "title": "조종",
+        "text": "각종 탈것과 중장비를 다루는 운전 기술입니다. \n여러 조종사들에겐 레바브의 케슬러 벨트를 통과하는 죽음의 비행이 일생의 목표로 여겨집니다.\n끝없이 부유하는 파편속에서, 전설이 되거나 역사의 잔해가 되어 궤도를 떠돌거나.",
+        "width": 25,
+        "image": "/image/choies/R11C10.webp",
+        "addon" : "누가 최고의 파일럿인가?",
+        "type": "button",
+        "actionType": "toggle"
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "재능"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "심리학",
+            "hidden": true
+          },
+          {
+            "type": "setValue",
+            "target": "point",
+            "value": "-3"
+          }
+        ],
+        "title": "심리학",
+        "text": "역사학, 사회학과 수학적 통계학을 한데 섞은 역사심리학은 집단 군중의 미래 행동에 대한 예측과, 과거에 대한 더 나은 이해를 위한 도구입니다.",
+        "width": 25,
+        "image": "/image/choies/R11C11.webp",
+        "addon" : "내가 그의 이름을 불러 주기 전에는,\n그는 실험실의 쥐에 불과했다.",
+        "type": "button",
+        "actionType": "toggle"
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "재능"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "해킹",
+            "hidden": true
+          },
+          {
+            "type": "setValue",
+            "target": "point",
+            "value": "-3"
+          }
+        ],
+        "title": "해킹",
+        "text": "컴퓨터 시스템과 네트워크에  침입하여 정보를 얻거나 조작하는 기술입니다. \n요즘 발견되는 기계들은 도통 전원 스위치가 안보여서 배워두는게 좋을 겁니다.",
+        "width": 25,
+        "image": "/image/choies/R11C12.webp",
+        "addon" : "\"설마 죽기야 하겠..?!\"",
+        "type": "button",
+        "actionType": "toggle"
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "재능"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "의지",
+            "hidden": true
+          },
+          {
+            "type": "setValue",
+            "target": "point",
+            "value": "-3"
+          }
+        ],
+        "title": "의지",
+        "text": "흔들림 속에서 균형을 유지하는 능력입니다.\n심리적 붕괴, 패닉, 유혹에 대한 저항력을 높이며,\n위기 속에서도 냉정을 잃지 않고 임무를 완수하게 합니다.\n\n기계는 멈출 수 있지만, 당신은 계속 움직입니다.",
+        "width": 25,
+        "image": "/image/choies/R11C13.webp",
+        "addon" : "당신은 그저 ‘괜찮다’고 말한다.\n그 한 마디에,\n온 우주의 무게가 실려 있다는 걸\n아무도 모를 뿐이다.",
+        "type": "button",
+        "actionType": "toggle"
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "재능"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "간파",
+            "hidden": true
+          },
+          {
+            "type": "setValue",
+            "target": "point",
+            "value": "-3"
+          }
+        ],
+        "title": "간파",
+        "text": "단서는 늘 눈앞에 있었습니다.\n다만, 대부분은 그냥 지나쳤겠죠.\n\n타인의 거짓, 시스템의 허점, 위장의 흐트러짐.\n그 모든 것은, 당신의 시야에서 숨을 곳이 없습니다.",
+        "width": 25,
+        "image": "/image/choies/R11C14.webp",
+        "addon" : "\"너흰 너무 설쳤어\"",
+        "type": "button",
+        "actionType": "toggle"
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "재능"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "행운",
+            "hidden": true
+          },
+          {
+            "type": "setValue",
+            "target": "point",
+            "value": "-3"
+          }
+        ],
+        "title": "행운",
+        "text": "당신은 확률의 틈바귀 속에서  불가능의 영역을 뛰어넘는 재주를 가지고 있습니다. 그저 요행으로 보일지 몰라도, 예측할 수 없고, 붙잡을 수도 없으며, 위헙이 되기도 하는 순간을 돌파 하는 것은 준비되어 있는 자만이 누릴 수 있는 축복 입니다.",
+        "width": 25,
+        "image": "/image/choies/R11C15.webp",
+        "addon" : "항상 깨어있으라, \n너희는 그 날과 때를 알지 못하느니라 ",
+        "type": "button",
+        "actionType": "toggle"
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "재능"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "카-본",
+            "hidden": true
+          },
+          {
+            "type": "setValue",
+            "target": "point",
+            "value": "-3"
+          }
+        ],
+        "title": "카-본",
+        "text": "해당 시술은 조골세포가 뼈를 만들 때 ,체내 중금속을 사용하여 골절에 대한 내성을 얻습니다. 테르마 개척 초기 중금속 중독에 대한 대책으로 개발되었고, 1년 간의 필터 교체 비용 보다 싼 시술 가격으로 큰 호응을 얻었습니다.",
+        "width": 25,
+        "image": "/image/choies/R11C16.webp",
+        "addon" : "[주의] 테르마 이외의 행성에 거주할 경우\n 주기적으로 중금속을 섭취해야 하며,\n이로 인한 발병은 책임지지 않습니다.",
+        "type": "button",
+        "actionType": "toggle"
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "재능"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "생존",
+            "hidden": true
+          },
+          {
+            "type": "setValue",
+            "target": "point",
+            "value": "-3"
+          }
+        ],
+        "title": "생존",
+        "text": "도구가 없을 땐 맨손으로 땅을 파고, 물을 걸러내며, 필요하다면 무엇이든 불쏘시개로 사용해 왔습니다.\n당신은 경험으로 알고 있습니다. 생존이란, \n버티는 것이 아니라 끊임없이 적응하는 것임을.",
+        "width": 25,
+        "image": "/image/choies/R11C17.webp",
+        "addon" : "당신은 생존했다.\n정의도, 신념도, 도리도 없이, \n그저...",
+        "type": "button",
+        "actionType": "toggle"
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "재능"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "외계학",
+            "hidden": true
+          },
+          {
+            "type": "setValue",
+            "target": "point",
+            "value": "-4"
+          }
+        ],
+        "title": "외계학",
+        "text": "외계 지성체와의 첫 접촉은 언어학, 인류학, 생물학이나 사회학 등 온갖 학문들의 급발전을 불러옵니다. 이렇게 빠른 속도로 발전한 학문들을 통틀어 [외계학]이라 칭합니다.",
+        "width": 25,
+        "image": "/image/choies/R11C18.webp",
+        "addon" : "\"이게 물리적으로 가능한 크기였어?\"",
+        "type": "button",
+        "actionType": "toggle"
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "재능"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "밀수",
+            "hidden": true
+          },
+          {
+            "type": "setValue",
+            "target": "point",
+            "value": "-6"
+          }
+        ],
+        "title": "밀수",
+        "text": "당신은 적절한 타이밍에, \n필요한 물건을 가진 사람입니다.\n\n경계를 흐리며 챙긴 약간의 마진, \n누가 그걸 손가락질할 수 있겠습니까?",
+        "width": 25,
+        "image": "/image/choies/R11C19.webp",
+        "addon" : "에탄올 14%, 당분 7%.\n레이블엔 구강세정제라 적혀 있지만, 입소문은 다르게 돌았습니다.\n\n누군가는 몰래 마시고, 누군가는 웃으며 팔고,\n당신은 둘 다 잘 아는 사람입니다.",
+        "type": "button",
+        "actionType": "toggle"
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "재능"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "광합성",
+            "hidden": true
+          },
+          {
+            "type": "setValue",
+            "target": "point",
+            "value": "-3"
+          }
+        ],
+        "title": "광합성",
+        "text": "피부 표면에 염흑소를 합성하는 시술입니다. 태양광을 받는 것 만으로 에너지를 얻을 수 있으며, 충분히 썬탠을 즐겼다면 식사를 하지 않아도 생명에 지장이 없습니다. 광합성 과정에서 점액질의 부산물이 피부에 맺치며, 상처에 대한 내성을 올려줍니다.",
+        "width": 25,
+        "image": "/image/choies/R11C20.webp",
+        "addon" : "\"아르고인들은 젤이 필요 없다던데...?\"\n\"식사 중에 꼭 이래야겠어?\"",
+        "type": "button",
+        "actionType": "toggle"
+      }
+    ]
+  },
+  "flaw": {
+    "name": "결점",
+    "description": "누구나 틈을 안고 살아갑니다.\n완벽함은 기록될 수 있지만, 공감받지는 못합니다.\n결점은 당신을 위험하게 만들고, 때로는 구원하기도 합니다.\n\n여기 있는 누구도 온전하지 않습니다.\n당신의 조각난 부분은, 어떤 모양입니까?",
+    "elements": [
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "결점"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "중력_멀미",
+            "hidden": true
+          },
+          {
+            "type": "setValue",
+            "target": "point",
+            "value": "3"
+          }
+        ],
+        "title": "중력 멀미",
+        "text": "오랜 기간 저중력 생활에 익숙해져서, 행성 중력권에서 달리기나 수영, 운반 등 신체 활동에 큰 어려움을 겪습니다. 중력이 강한 행성일수록 많은 영향을 받으며,  치료를 위해 꾸준한 재활 운동이 권장됩니다.",
+        "width": 25,
+        "image": "/image/choies/R12C1.webp",
+        "addon" : "\"고향에선 100m 쯤은 쉬웠는데..\"",
+        "type": "button",
+        "actionType": "toggle"
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "결점"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "터널_시야",
+            "hidden": true
+          },
+          {
+            "type": "setValue",
+            "target": "point",
+            "value": "3"
+          }
+        ],
+        "title": "터널 시야",
+        "text": "어떤 일에 집중할 때, 주변을 관찰하거나 사각지대에서 오는 위협을 감지하기 어려워집니다.",
+        "width": 25,
+        "image": "/image/choies/R12C2.webp",
+        "addon" : "\"오늘 저녁은 뭐 먹지..?\"",
+        "type": "button",
+        "actionType": "toggle"
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "결점"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "심우주_공포증",
+            "hidden": true
+          },
+          {
+            "type": "setValue",
+            "target": "point",
+            "value": "3"
+          }
+        ],
+        "title": "심우주 공포증",
+        "text": "우주에서 공간에서 극도의 불안을 느낍니다.  \n심한 경우 간질이나 발작을 일으키는 경우가 있어, 성간 항해 시 해당 인원들은 도착 후 활성화 하는 것이 규정 입니다.",
+        "width": 25,
+        "image": "/image/choies/R12C3.webp",
+        "addon" : "우주에서는 아무도 당신의 비명을 듣지 못한다.",
+        "type": "button",
+        "actionType": "toggle"
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "결점"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "낮은_골밀도",
+            "hidden": true
+          },
+          {
+            "type": "setValue",
+            "target": "point",
+            "value": "3"
+          }
+        ],
+        "title": "낮은 골밀도",
+        "text": "오랜 기간 무중력 환경에 노출된 탓에 뼈가 약해졌습니다. \n물리적인 충격을 받으면 쉽게 부상을 입습니다.",
+        "width": 25,
+        "image": "/image/choies/R12C4.webp",
+        "addon" : "\"그게.. 애인이 아니고요...\"",
+        "type": "button",
+        "actionType": "toggle"
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "결점"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "수면_장애",
+            "hidden": true
+          },
+          {
+            "type": "setValue",
+            "target": "point",
+            "value": "4"
+          }
+        ],
+        "title": "수면 장애",
+        "text": "깊이 잠들지 못하며, 지속적인 피로에 시달립니다. 휴식 중에도 체력이 충분히 회복되지 않습니다.",
+        "width": 25,
+        "image": "/image/choies/R12C5.webp",
+        "addon" : "수면이 반드시 휴식을 의미하지는 않는다.",
+        "type": "button",
+        "actionType": "toggle"
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "결점"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "중독",
+            "hidden": true
+          },
+          {
+            "type": "setValue",
+            "target": "point",
+            "value": "3"
+          }
+        ],
+        "title": "중독",
+        "text": "술이나 담배, 약 등에 중독되어 있습니다. 해당 물질에 과하게 집착하며, 투약하지 않을 시 금단현상이 발현됩니다.",
+        "width": 25,
+        "image": "/image/choies/R12C6.webp",
+        "addon" : "모든 것을 주지만, 결국 값을 치러야한다.",
+        "type": "button",
+        "actionType": "toggle"
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "결점"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "냉소주의자",
+            "hidden": true
+          },
+          {
+            "type": "setValue",
+            "target": "point",
+            "value": "3"
+          }
+        ],
+        "title": "냉소주의자",
+        "text": "지나치게 비판적이고 부정적인 태도를 가지고 있어 팀원들과 갈등을 빚거나 사기를 저하시킬 수 있습니다.",
+        "width": 25,
+        "image": "/image/choies/R12C7.webp",
+        "addon" : "멍청이들은 지금이 최선이라고 하지만, 비관론자들은 그것이 사실일까 두려워한다.",
+        "type": "button",
+        "actionType": "toggle"
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "결점"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "이인증",
+            "hidden": true
+          },
+          {
+            "type": "setValue",
+            "target": "point",
+            "value": "3"
+          }
+        ],
+        "title": "이인증",
+        "text": "당신은 거기에 있었습니다.\n목소리도, 움직임도, 감정도 분명히 [당신]의 것이었지만, 그 모든 것이 화면 너머에서 일어나는 일처럼 느껴집니다. 누군가는 침착하다고 말하지만, 당신은 알고 있습니다.\n그저, 텅 비어버렸다는걸.",
+        "width": 25,
+        "image": "/image/choies/R12C8.webp",
+        "addon" : "풀어지는 건 언제나, \n손에 쥔 줄도 몰랐던 끈이다.",
+        "type": "button",
+        "actionType": "toggle"
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "결점"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "과소비",
+            "hidden": true
+          },
+          {
+            "type": "setValue",
+            "target": "point",
+            "value": "3"
+          }
+        ],
+        "title": "과소비",
+        "text": "자원을 비효율적으로 사용하는 습관이 있어, 식량이나 자원을 빠르게 소모합니다.",
+        "width": 25,
+        "image": "/image/choies/R12C9.webp",
+        "addon" : "만족은 소비에서 오는 것이 아니라, 필요를 충족시키는 것에서 온다.",
+        "type": "button",
+        "actionType": "toggle"
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "결점"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "생존_본능",
+            "hidden": true
+          },
+          {
+            "type": "setValue",
+            "target": "point",
+            "value": "5"
+          }
+        ],
+        "title": "생존 본능",
+        "text": "기벽으로 분류될 정도의 극단적 생존 본능입니다. 위험을 감지하면이성적인 판단보다 즉각적인 회피를 우선합니다. 위기에서 살아남기 위해 거짓을 일삼고, 필요하다면 어떠한 대가 든 생존을 위해서 치를 준비가 되어 있습니다.",
+        "width": 25,
+        "image": "/image/choies/R12C10.webp",
+        "addon" : "바닥에서 엎드려 피를 맛봤다.\n그 맛을 잊지 않기 위해,\n삼키지 않았다.",
+        "type": "button",
+        "actionType": "toggle"
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "결점"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "트라우마",
+            "hidden": true
+          },
+          {
+            "type": "setValue",
+            "target": "point",
+            "value": "3"
+          }
+        ],
+        "title": "트라우마",
+        "text": "‘트라우마’는 특정 자극(소리, 냄새, 장면 등)에 의해 이전의 공포 반응이 재현되는 상태입니다. 급작스러운 행동 , 패닉, 또는 이상 반응이 발생할 수 있으며, 회피하려는 경향은 판단을 흐리게 만들기도 합니다.",
+        "width": 25,
+        "image": "/image/choies/R12C11.webp",
+        "addon" : "어떤 사람들은 압력에 쉽게 굴복한다. \n어떤 사람들은 아예 부서진다.",
+        "type": "button",
+        "actionType": "toggle"
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "결점"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "약물_거부",
+            "hidden": true
+          },
+          {
+            "type": "setValue",
+            "target": "point",
+            "value": "4"
+          }
+        ],
+        "title": "약물 거부",
+        "text": "약물 거부는 주로 유전자 편집이 반복된 개인이나,아르고처럼 독립적인 생물학적 계보를 가진 이들에게 나타납니다.\n외부 개입에 둔감한 신체는 회복 속도가 느리고,\n치료의 대가로는 항상 더 큰 고통을 치르게 됩니다. 그들의 몸은 강인하지만,\n그만큼 쉽게 다치지 않기를 바라는 수밖에 없습니다.",
+        "width": 25,
+        "image": "/image/choies/R12C12.webp",
+        "addon" : "고통은 가르침이 되고, 인내는 방패가 되나니, 참회하라. 그대의 육신은 스스로 싸우게 하라.《텅 빈 함선의 말씀》 中",
+        "type": "button",
+        "actionType": "toggle"
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "결점"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "온도_민감성",
+            "hidden": true
+          },
+          {
+            "type": "setValue",
+            "target": "point",
+            "value": "3"
+          }
+        ],
+        "title": "온도 민감성",
+        "text": "온도 변화에 매우 취약합니다. 고온이나 저온 환경에서는 체력이 급격히 소모됩니다.",
+        "width": 25,
+        "image": "/image/choies/R12C13.webp",
+        "addon" : "\"부탁인데 일 중엔 옷 입어주면 안될까?\"\n\"급여 3달치 방열복 찢겨보면 이해할 걸요?\"",
+        "type": "button",
+        "actionType": "toggle"
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "결점"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "인간불신",
+            "hidden": true
+          },
+          {
+            "type": "setValue",
+            "target": "point",
+            "value": "3"
+          }
+        ],
+        "title": "인간불신",
+        "text": "과거의 경험으로 인해, 타인의 행동을 쉽게 믿지 못합니다. 도움을 요청하거나 정보를 공유하는 데 주저하며, 선의조차 의심하여, 팀워크에 지장을 줄 수 있습니다.신뢰를 형성하는 데 시간이 오래 걸리며, 외부 위협보다 내부 갈등을 먼저 떠올리는 경향이 있습니다.",
+        "width": 25,
+        "image": "/image/choies/R12C14.webp",
+        "addon" : "믿는 것은, 아직 이르다.",
+        "type": "button",
+        "actionType": "toggle"
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "결점"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "무모함",
+            "hidden": true
+          },
+          {
+            "type": "setValue",
+            "target": "point",
+            "value": "5"
+          }
+        ],
+        "title": "무모함",
+        "text": "위험을 과소평가하고 충동적으로 행동하는 성향입니다.신중한 결정을 내려야 할 순간에 즉흥적으로 행동해 함정이나 매복의 가능성을 무시하고 먼저 움직이거나, 보호 장비 없이 위험 지대에 진입하는 등의 행동을 통해, 팀 전체를 위태롭게 만들 수 있습니다.",
+        "width": 25,
+        "image": "/image/choies/R12C15.webp",
+        "addon" : "논리적 해결책이 모두 허사로 끝나면,\n비논리적인 방법을 택할 때다.",
+        "type": "button",
+        "actionType": "toggle"
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "결점"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "복수귀",
+            "hidden": true
+          },
+          {
+            "type": "setValue",
+            "target": "point",
+            "value": "5"
+          }
+        ],
+        "title": "복수귀",
+        "text": "받은 상처와 모욕을 결코 잊지 않으며, 보복을 갈망합니다.복수의 대상과 관련된 판단에서 이성은 뒷전으로 밀려나며, 임무보다 개인적인 감정을 우선합니다.\n원한을 갚기 위해 위험을 자초하거나, 불리한 상황에도 무리하게 움직입니다.\n복수는 달콤하지만, 그 불꽃은 종종 \n자기 자신을 먼저 태웁니다.",
+        "width": 25,
+        "image": "/image/choies/R12C16.webp",
+        "addon" : "화내지 말고, 갚아주어라",
+        "type": "button",
+        "actionType": "toggle"
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "결점"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "고집불통",
+            "hidden": true
+          },
+          {
+            "type": "setValue",
+            "target": "point",
+            "value": "3"
+          }
+        ],
+        "title": "고집불통",
+        "text": "자신의 방식이나 신념을 고수하며 타인의 의견이나 새로운 제안을 받아들이지 못합니다. \n팀 내 의사결정 과정에서 타협을 거부하거나, 상황 변화에도 불구하고 계획을 수정하지 않아 갈등을 유발합니다.\n명백한 증거 앞에서도 판단을 굽히지 않고, 더 나은 방법이 제시되어도 익숙한 방식을 고집합니다.",
+        "width": 25,
+        "image": "/image/choies/R12C17.webp",
+        "addon" : "파인애플 피자가 별로라고? \n잘 하는 곳을 안 가봐서 그래",
+        "type": "button",
+        "actionType": "toggle"
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "결점"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "광장_공포증",
+            "hidden": true
+          },
+          {
+            "type": "setValue",
+            "target": "point",
+            "value": "5"
+          }
+        ],
+        "title": "광장 공포증",
+        "text": "넓고 개방된 공간, 혹은 탈출이 어려운 환경에서 \n극심한 불안과 공포를 느낍니다.\n이로 인해 안전한 우회로를 거부하거나, \n위험하더라도 밀폐된 공간만을 고집하는 등 \n탐험과 이동에 지속적인 제약이 따릅니다.",
+        "width": 25,
+        "image": "/image/choies/R12C18.webp",
+        "addon" : "어떤 상처는 결코 아물지 않는다.",
+        "type": "button",
+        "actionType": "toggle"
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "결점"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "폐쇄_공포증",
+            "hidden": true
+          },
+          {
+            "type": "setValue",
+            "target": "point",
+            "value": "3"
+          }
+        ],
+        "title": "폐쇄 공포증",
+        "text": "좁고 밀폐된 공간에서 극도의 불안과 공포를 느낍니다. 공황 반응으로 인해 비상구를 향해 무모하게 움직이거나, 임무 중 좁은 구역 진입에 거부합니다. 심한 경우, 밀폐형 우주복 착용조차 반발합니다.",
+        "width": 25,
+        "image": "/image/choies/R12C19.webp",
+        "addon" : "그녀의 비명을 사람들이 들어주기에는 너무 깊이 묻혔다.",
+        "type": "button",
+        "actionType": "toggle"
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "결점"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "죽음충동",
+            "hidden": true
+          },
+          {
+            "type": "setValue",
+            "target": "point",
+            "value": "10"
+          }
+        ],
+        "title": "죽음충동",
+        "text": "극한 상황에 끌리는 비정상적인 충동으로 인해,\n안전한 대안이 존재하더라도 \n의도적으로 위험한 선택을 하며,\n치명적인 결과를 알고도 피하지 못하는 \n자기파괴적 행동을 반복합니다.",
+        "width": 25,
+        "image": "/image/choies/R12C20.webp",
+        "addon" : "이것이 인간의 비극이니,\n그 주인공은 정복자 벌레라",
+        "type": "button",
+        "actionType": "toggle",
+        "condition": "tags << \"무모함\""
+      }
+    ]
+  },
+  "gear1": {
+    "name": "특수장비",
+    "description": "무중력, 유독한 대기, 감정의 붕괴, 끊어진 통신, 찢어진 피부…\n당신이 살아남아야 한다면, 최소한의 준비는 되어 있어야 합니다.\n\n특수장비는 전투, 탐사, 생존, 혹은 정보 수집을 보조하기 위해 설계된 장비들입니다.\n각 장비는 그 자체로 하나의 생존 전략이며, 선택은 곧 생존 방식의 선언입니다.\n\n어떤 장비는 무너진 폐허 속에서 당신의 호흡을 지켜줄 것입니다.\n어떤 장비는 잊힌 시스템을 다시 작동시킬 단 하나의 열쇠가 됩니다.\n어떤 장비는 오직 당신이 살아남은 유일한 이유가 될 것입니다.\n\n하지만 모든 것을 챙길 수는 없습니다.\n무엇을 들고 가겠습니까?",
+    "elements": [
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "특수장비"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "[VEIN-4]_바이탈_측정기",
+            "hidden": true
+          },
+          {
+            "type": "setValue",
+            "target": "point",
+            "value": "-6"
+          }
+        ],
+        "title": "[VEIN-4] 바이탈 측정기",
+        "text": "VEIN-4는 구조 현장에서 부상자의 상태를 빠르게 파악하고,\n우선 순위를 결정하기 위한 목적으로 개발되었습니다.\n수신 반경은 약 3~5m이며, 밀폐복이나 방호복 너머의\n생체 신호도 일부 감지 가능합니다.\n\"주님, 제발 한 명만 더!\"",
+        "width": 30,
+        "image": "/image/choies/R13C1.webp",
+        "type": "button",
+        "actionType": "toggle",
+        "requires": {
+          "tags": ["밀수","의무병"]
+        }
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "특수장비"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "케르베로스_호흡장치",
+            "hidden": true
+          },
+          {
+            "type": "setValue",
+            "target": "point",
+            "value": "-6"
+          }
+        ],
+        "title": "케르베로스 호흡장치",
+        "text": "‘케르베로스’는 3중 필터 구조를 채택하여 황화수소, 염소계 가스, 미립자 독소 등 다양한 유해 물질로부터 사용자를 보호하며, 통합 음성 변조 장치를 통해 통신 간 신원 노출을 최소화 합니다.\n\n<i><b>상처 입은 짐승은 오래 살 수 없다.</i></b>",
+        "width": 30,
+        "image": "/image/choies/R13C2.webp",
+        "type": "button",
+        "actionType": "toggle",
+        "requires": {
+          "tags": ["밀수","용병"]
+        }
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "특수장비"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "[LUX-3]_정서_반응_측정_드론",
+            "hidden": true
+          },
+          {
+            "type": "setValue",
+            "target": "point",
+            "value": "-6"
+          }
+        ],
+        "title": "[LUX-3] 정서 반응 측정 드론",
+        "text": "LUX-3는 인간의 비언어적 정서 반응을 실시간으로 수집 및 분석하는 경량 감시 드론입니다. 정밀한 움직임과 낮은 가청 소음 설계로 인해 대상자의 스트래스 반응을 최소화 하였습니다.\n\n<i><b>LUX-3는 공식적으로 [기록하지 않는다]고\n명시된 대화에서도 작동 중일 수 있습니다</i></b>",
+        "width": 30,
+        "image": "/image/choies/R13C3.webp",
+        "type": "button",
+        "actionType": "toggle",
+        "requires": {
+          "tags": ["밀수","심리학자"]
+        }
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "특수장비"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "용접기",
+            "hidden": true
+          },
+          {
+            "type": "setValue",
+            "target": "point",
+            "value": "-6"
+          }
+        ],
+        "title": "용접기",
+        "text": "SPARK-IX는 우주 환경에서도 안정적인 작동을 보장하는 다목적 플라즈마 용접기로, 주요 금속 및 복합 합금 접합에 최적화되어 있습니다.\n\n<i><b>[중대 사고 발생 알림]\n\n현장 작업 중 SPARK-X 휴대용 용접기를 고출력 모드\n상태로 인식하지 못한 채 가동.\n작업자가 손을 기계 근처에 두고 점화했으며, \n강한 아크에 의해 손가락 절단발생.</i></b>",
+        "width": 30,
+        "image": "/image/choies/R13C4.webp",
+        "type": "button",
+        "actionType": "toggle",
+        "requires": {
+          "tags": ["밀수","정비병"]
+        }
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "특수장비"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "[AIDOS-SC]_동작_감지기",
+            "hidden": true
+          },
+          {
+            "type": "setValue",
+            "target": "point",
+            "value": "-6"
+          }
+        ],
+        "title": "[AIDOS-SC] 동작 감지기",
+        "text": "엘리시온 정글 지대에서의 생물체 행동 패턴을 기록하고 분석하기 위해 개발된 탐지 장비입니다. 생물의 적대 반응을 유도하지 않도록 비자극성 출력 방식 채택하여 안심하고 사용 가능합니다.\n\n\"자 오늘은 5만 달러 짜리 장비로\n술래잡기를 해보겠습니다!\"",
+        "width": 30,
+        "image": "/image/choies/R13C5.webp",
+        "type": "button",
+        "actionType": "toggle",
+        "requires": {
+          "tags": ["밀수","과학장교"]
+        }
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "특수장비"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "NAIV",
+            "hidden": true
+          },
+          {
+            "type": "setValue",
+            "target": "point",
+            "value": "-6"
+          }
+        ],
+        "title": "NAIV",
+        "text": "NAIV는 웨어러블 HUD기기로, 작업 가능한 경로는 하이라이트되어 즉시 해킹 가능 여부를 판단할 수 있으며, 일부 노드는 ‘잠김’ 또는 ‘이상 반응’ 상태로 표시되어 위험도를 예측할 수 있습니다.\n\n<i><b>당신의 손끝에서 세상이 열린다.</i></b>",
+        "width": 30,
+        "image": "/image/choies/R13C6.webp",
+        "type": "button",
+        "actionType": "toggle",
+        "requires": {
+          "tags": ["밀수","해커"]
+        }
+      }
+    ]
+  },
+  "gear2": {
+    "name": "공용장비",
+    "description": "",
+    "elements": [
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "공용장비"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "의료_키트",
+            "hidden": true
+          },
+          {
+            "type": "setValue",
+            "target": "point",
+            "value": "-4"
+          }
+        ],
+        "title": "의료 키트",
+        "text": "다목적 의료 키트입니다. 외상, 출혈, 골절 등 \n다양한 상황에서 빠르게 대응이 가능합니다.",
+        "width": 25,
+        "image": "/image/choies/R14C1.webp",
+        "type": "button",
+        "actionType": "toggle"
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "공용장비"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "기절_수류탄",
+            "hidden": true
+          },
+          {
+            "type": "setValue",
+            "target": "point",
+            "value": "-4"
+          }
+        ],
+        "title": "기절 수류탄",
+        "text": "중력파 기반 제압 장비로, 폭발 후 일시적인 기립반사 붕괴를 유발하여 치명상 없이 제압이 가능합니다.",
+        "width": 25,
+        "image": "/image/choies/R14C4.webp",
+        "type": "button",
+        "actionType": "toggle"
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "공용장비"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "마스터_키",
+            "hidden": true
+          },
+          {
+            "type": "setValue",
+            "target": "point",
+            "value": "-4"
+          }
+        ],
+        "title": "마스터 키",
+        "text": "구형 보안 시스템 해제용 일회용 전자 키.\n작동 시 짧은 시간 동안 가능한 모든 조합을 시도하며,과열로 인해 사용 후에는 폐기됩니다.\n범용성은 높지만, 고등급 보안 설비에는 효과가 없습니다.",
+        "width": 25,
+        "image": "/image/choies/R14C7.webp",
+        "type": "button",
+        "actionType": "toggle"
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "공용장비"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "조명탄",
+            "hidden": true
+          },
+          {
+            "type": "setValue",
+            "target": "point",
+            "value": "-3"
+          }
+        ],
+        "title": "조명탄",
+        "text": "어둠 속에서 시야 확보를 위한 기본 장비. 구명 신호, 위치 표시 등에 활용됩니다.",
+        "width": 25,
+        "image": "/image/choies/R14C5.webp",
+        "type": "button",
+        "actionType": "toggle"
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "공용장비"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "신경_안정제",
+            "hidden": true
+          },
+          {
+            "type": "setValue",
+            "target": "point",
+            "value": "-4"
+          }
+        ],
+        "title": "신경 안정제",
+        "text": "패닉, 환각, 기타 정신 이상 증세를 완화하는 주사형 안정제. 효과는 빠르지만 반복 사용 시 감각 둔화, 중독 위험이 있습니다.",
+        "width": 25,
+        "image": "/image/choies/R14C2.webp",
+        "type": "button",
+        "actionType": "toggle"
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "공용장비"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "현장_분석_키트",
+            "hidden": true
+          },
+          {
+            "type": "setValue",
+            "target": "point",
+            "value": "-4"
+          }
+        ],
+        "title": "현장 분석 키트",
+        "text": "간이 실험 장비 및 센서가 포함된 휴대형 키트. 샘플 채취 및 분석이 가능하며, 정체불명의 물질이나 생물학적 위험을 판단할 수 있습니다.",
+        "width": 25,
+        "image": "/image/choies/R14C8.webp",
+        "type": "button",
+        "actionType": "toggle"
+      }
+    ]
+  },
+  "weapon_base": {
+    "name": "무장",
+    "description": "무장은 단순한 장비가 아니라,\n당신이 상황을 어떻게 해석하고, 어디까지 감수할 수 있는지를 말해줍니다.\n\n오랜 경험 끝에 검증된 장비들은 안정적이고 믿을 수 있지만, 제한적이며, \n예측 가능한 대응밖에 허락하지 않습니다.\n\n반대로 아직 실전 테스트조차 끝나지 않은 장비들은\n기묘하고, 위험하고, 그만큼 상상 이상의 결과를 가져올 수도 있습니다.\n\n당신은 무엇까지 감당할 수 있습니까?",
+    "elements": [
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "무장"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "권총",
+            "hidden": true
+          },
+          {
+            "type": "setValue",
+            "target": "damage_dice_count",
+            "value": "1"
+          },
+          {
+            "type": "setValue",
+            "target": "damage_dice_sides",
+            "value": "4"
+          },
+          {
+            "type": "setValue",
+            "target": "ammo",
+            "value": "3"
+          },
+          {
+            "type": "setValue",
+            "target": "rangeMin",
+            "value": "1"
+          },
+          {
+            "type": "setValue",
+            "target": "rangeMax",
+            "value": "1"
+          },
+          {
+            "type": "setValue",
+            "target": "max_perk_count",
+            "value": 1
+          }
+        ],
+        "title": "권총",
+        "text": "레이저 포인터 장착",
+        "width": 30,
+        "image": "/image/choies/R15C1.webp",
+        "type": "button",
+        "actionType": "toggle",
+        "damage": "1d4",
+        "ammo": 3,
+        "linked": [
+          "레이저 포인트"
+        ],
+        "range": [
+          0,
+          1
+        ]
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "무장"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "기관단총",
+            "hidden": true
+          },
+          {
+            "type": "setValue",
+            "target": "point",
+            "value": "-3"
+          },
+          {
+            "type": "setValue",
+            "target": "damage",
+            "value": "1d6"
+          },
+          {
+            "type": "setValue",
+            "target": "ammo",
+            "value": "5"
+          },
+          {
+            "type": "setValue",
+            "target": "rangeMin",
+            "value": "1"
+          },
+          {
+            "type": "setValue",
+            "target": "rangeMax",
+            "value": "2"
+          },
+          {
+            "type": "setValue",
+            "target": "damage_dice_count",
+            "value": "1"
+          },
+          {
+            "type": "setValue",
+            "target": "damage_dice_sides",
+            "value": "6"
+          },
+          {
+            "type": "setValue",
+            "target": "max_perk_count",
+            "value": 1
+          }
+          
+        ],
+        "title": "기관단총",
+        "text": "단축형 노리쇠 장착",
+        "width": 30,
+        "image": "/image/choies/R15C2.webp",
+        "type": "button",
+        "actionType": "toggle",
+        "damage": "1d6",
+        "ammo": 5,
+        "linked": [
+          "단축형 노리쇠"
+        ],
+        "range": [
+          1,
+          2
+        ]
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "무장"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "산탄총",
+            "hidden": true
+          },
+          {
+            "type": "setValue",
+            "target": "point",
+            "value": "-5"
+          },
+          {
+            "type": "setValue",
+            "target": "damage",
+            "value": "3d4"
+          },
+          {
+            "type": "setValue",
+            "target": "ammo",
+            "value": "3"
+          },
+          {
+            "type": "setValue",
+            "target": "rangeMin",
+            "value": "1"
+          },
+          {
+            "type": "setValue",
+            "target": "rangeMax",
+            "value": "2"
+          },
+          {
+            "type": "setValue",
+            "target": "damage_dice_count",
+            "value": "3"
+          },
+          {
+            "type": "setValue",
+            "target": "damage_dice_sides",
+            "value": "4"
+          },
+          {
+            "type": "setValue",
+            "target": "max_perk_count",
+            "value": 1
+          }
+        ],
+        "title": "산탄총",
+        "text": "잔혹한 대화수단 입니다.",
+        "width": 30,
+        "image": "/image/choies/R15C6.webp",
+        "type": "button",
+        "actionType": "toggle",
+        "damage": "3d4",
+        "ammo": 3,
+        "linked": [
+          "잔혹함"
+        ],
+        "range": [
+          1,
+          2
+        ]
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "무장"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "소총",
+            "hidden": true
+          },
+          {
+            "type": "setValue",
+            "target": "point",
+            "value": "-6"
+          },
+          {
+            "type": "setValue",
+            "target": "damage",
+            "value": "1d8"
+          },
+          {
+            "type": "setValue",
+            "target": "ammo",
+            "value": "5"
+          },
+          {
+            "type": "setValue",
+            "target": "rangeMin",
+            "value": "1"
+          },
+          {
+            "type": "setValue",
+            "target": "rangeMax",
+            "value": "3"
+          },
+          {
+            "type": "setValue",
+            "target": "damage_dice_count",
+            "value": "1"
+          },
+          {
+            "type": "setValue",
+            "target": "damage_dice_sides",
+            "value": "8"
+          },
+          {
+            "type": "setValue",
+            "target": "max_perk_count",
+            "value": 1
+          }
+        ],
+        "title": "소총",
+        "text": "퀵드로 탄창 포함",
+        "width": 30,
+        "image": "/image/choies/R15C4.webp",
+        "type": "button",
+        "actionType": "toggle",
+        "damage": "1d8",
+        "ammo": 5,    
+        "linked": [
+          "퀵드로 탄창"
+        ],    
+        "requires": {
+          "tags": ["용병","밀수"]
+        },
+        "range": [
+          1,
+          3
+        ]
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "무장"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "중기관총",
+            "hidden": true
+          },
+          {
+            "type": "setValue",
+            "target": "point",
+            "value": "-6"
+          },
+          {
+            "type": "setValue",
+            "target": "damage",
+            "value": "2d6"
+          },
+          {
+            "type": "setValue",
+            "target": "ammo",
+            "value": "6"
+          },
+          {
+            "type": "setValue",
+            "target": "rangeMin",
+            "value": "2"
+          },
+          {
+            "type": "setValue",
+            "target": "rangeMax",
+            "value": "4"
+          },
+          {
+            "type": "setValue",
+            "target": "damage_dice_count",
+            "value": "2"
+          },
+          {
+            "type": "setValue",
+            "target": "damage_dice_sides",
+            "value": "6"
+          },
+          {
+            "type": "setValue",
+            "target": "max_perk_count",
+            "value": -1
+          },
+          {
+            "type": "setValue",
+            "target": "max_flaw_count",
+            "value": 1
+          }
+        ],
+        "title": "중기관총",
+        "text": "거치 필요",
+        "width": 30,
+        "image": "/image/choies/R15C5.webp",
+        "type": "button",
+        "actionType": "toggle",
+        "damage": "2d6",
+        "ammo": 6,        
+        "requires": {
+          "tags": ["용병","밀수"]
+        },
+        "linked": [
+          "거치 필요"
+        ],
+        "range": [
+          2,
+          4
+        ]
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "무장"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "저격총",
+            "hidden": true
+          },
+          {
+            "type": "setValue",
+            "target": "point",
+            "value": "-5"
+          },
+          {
+            "type": "setValue",
+            "target": "damage",
+            "value": "1d12"
+          },
+          {
+            "type": "setValue",
+            "target": "ammo",
+            "value": "2"
+          },
+          {
+            "type": "setValue",
+            "target": "rangeMin",
+            "value": "2"
+          },
+          {
+            "type": "setValue",
+            "target": "rangeMax",
+            "value": "5"
+          },
+          {
+            "type": "setValue",
+            "target": "damage_dice_count",
+            "value": "1"
+          },
+          {
+            "type": "setValue",
+            "target": "damage_dice_sides",
+            "value": "12"
+          },
+          {
+            "type": "setValue",
+            "target": "max_perk_count",
+            "value": -1
+          },
+          {
+            "type": "setValue",
+            "target": "max_flaw_count",
+            "value": 1
+          }
+        ],
+        "title": "저격총",
+        "text": "거치 필요",
+        "width": 30,
+        "image": "/image/choies/R15C3.webp",
+        "type": "button",
+        "actionType": "toggle",
+        "damage": "1d12",
+        "ammo": 2,
+        "linked": [
+          "거치 필요"
+        ],
+        "range": [
+          2,
+          5
+        ]
+      }
+    ],
+    "maxSelect": 1,
+    "required": 1
+  },
+  "weapon_mod": {
+    "name": "모디파이어",
+    "description": "",
+    "elements": [
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "모디파이어"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "실탄",
+            "hidden": true
+          }
+        ],
+        "title": "실탄",
+        "text": "적에게 피해를 입힐 때마다.\n무작위 중상을 부여합니다.",
+        "width": 20,
+        "image": "/image/choies/R16C1.webp",
+        "type": "button",
+        "actionType": "toggle"
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "모디파이어"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "레일건",
+            "hidden": true
+          }
+        ],
+        "title": "레일건",
+        "text": "적의 장갑을 무시합니다.",
+        "width": 20,
+        "image": "/image/choies/R16C2.webp",
+        "type": "button",
+        "actionType": "toggle"
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "모디파이어"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "레이저",
+            "hidden": true
+          },
+          {
+            "type": "setValue",
+            "target": "aim",
+            "value": "2",
+            "hidden": true
+          }
+        ],
+        "title": "레이저",
+        "text": "명중 보정 +2",
+        "width": 20,
+        "image": "/image/choies/R16C3.webp",
+        "type": "button",
+        "actionType": "toggle"
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "모디파이어"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "플라즈마",
+            "hidden": true
+          }
+        ],
+        "title": "플라즈마",
+        "text": "적에게 피해를 입힐 때마다.\n 화상을 2부여합니다.",
+        "width": 20,
+        "image": "/image/choies/R16C4.webp",
+        "type": "button",
+        "actionType": "toggle"
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "모디파이어"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "아크",
+            "hidden": true
+          }
+        ],
+        "title": "아크",
+        "text": "더이상 치명타가 발생하지 않습니다.\n공격이 빗나갓을 때 해당 칸의 모든 캐릭터에게\n 2의 피해를 입힙니다.",
+        "width": 20,
+        "image": "/image/choies/R16C5.webp",
+        "type": "button",
+        "actionType": "toggle"
+      }
+    ],
+    "maxSelect": 1,
+    "required": 1
+  },
+  "weapon_perk_id": {
+    "name": "고유개조",
+    "description": "",
+    "elements": [
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "고유개조"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "매그넘",
+            "hidden": true
+          },
+          {
+            "type": "setValue",
+            "target": "point",
+            "value": "-3"
+          },
+          {
+            "type": "setValue",
+            "target": "damage_dice_sides",
+            "value": "4"
+          },
+          {
+            "type": "setValue",
+            "target": "ammo",
+            "value": "-1"
+          },
+          {
+            "type": "setValue",
+            "target": "rangeMax",
+            "value": "1"
+          }
+        ],
+        "title": "매그넘",
+        "text": "피해 주사위를 1d8로 대체\n 최대 사거리 +1\n장탄 수 -1",
+        "width": 25,
+        "image": "",
+        "type": "button",
+        "actionType": "toggle",
+        "requires": {
+          "tags": "권총"
+        },
+
+        "hidden": true
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "고유개조"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "아킴보",
+            "hidden": true
+          },
+          {
+            "type": "setValue",
+            "target": "point",
+            "value": "-4"
+          },
+          {
+            "type": "setValue",
+            "target": "ammo",
+            "value": "+3"
+          },
+          {
+            "type": "setValue",
+            "target": "rangeMax",
+            "value": "-1"
+          }
+        ],
+        "title": "아킴보",
+        "text": "공격 시 2회 공격\n장탄 수 +100%\n 최대 사거리 -1",
+        "width": 25,
+        "image": "",
+        "type": "button",
+        "actionType": "toggle",
+        "requires": {
+          "tags": "권총"
+        },
+        "hidden": true
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "고유개조"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "탄막형성",
+            "hidden": true
+          },
+          {
+            "type": "setValue",
+            "target": "point",
+            "value": "-3"
+          }
+        ],
+        "title": "탄막형성",
+        "text": "공격을 지속 할 때마다\n무기 주사위 추가\n 최대 2회까지 중첩",
+        "width": 25,
+        "image": "",
+        "type": "button",
+        "actionType": "toggle",
+        "requires": {
+          "tags": "중기관총"
+        },
+        "hidden": true
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "고유개조"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "제압",
+            "hidden": true
+          },
+          {
+            "type": "setValue",
+            "target": "point",
+            "value": "-3"
+          }
+        ],
+        "title": "제압",
+        "text": "이번턴에 피해를 입힌 적이 이동할 때,\n 추가로 공격 가능",
+        "width": 25,
+        "image": "",
+        "type": "button",
+        "actionType": "toggle",
+        "requires": {
+          "tags": "중기관총"
+        },
+        "hidden": true
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "고유개조"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "지정사수",
+            "hidden": true
+          },
+          {
+            "type": "setValue",
+            "target": "point",
+            "value": "-5"
+          },
+          {
+            "type": "setValue",
+            "target": "crit",
+            "value": "20"
+          }
+        ],
+        "title": "지정사수",
+        "text": "치명타 확률 +20%",
+        "width": 25,
+        "image": "",
+        "type": "button",
+        "actionType": "toggle",
+        "requires": {
+          "tags": "저격총"
+        },
+        "hidden": true
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "고유개조"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "스냅샷",
+            "hidden": true
+          },
+          {
+            "type": "setValue",
+            "target": "point",
+            "value": "-3"
+          }
+        ],
+        "title": "스냅샷",
+        "text": "[거치 필요]결점 무시",
+        "width": 25,
+        "image": "",
+        "type": "button",
+        "actionType": "toggle",
+        "requires": {
+          "tags": "저격총"
+        },
+        "hidden": true
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "고유개조"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "절멸자",
+            "hidden": true
+          },
+          {
+            "type": "setValue",
+            "target": "point",
+            "value": "-4"
+          }
+        ],
+        "title": "절멸자",
+        "text": "탄약 2개를 추가로 소모하여 2회 추가 공격\n단축형 노리쇠를 대체",
+        "width": 25,
+        "image": "",
+        "type": "button",
+        "actionType": "toggle",
+        "requires": {
+          "tags": "기관단총"
+        },
+        "hidden": true
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "고유개조"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "강박자",
+            "hidden": true
+          },
+          {
+            "type": "setValue",
+            "target": "point",
+            "value": "-3"
+          }
+        ],
+        "title": "강박자",
+        "text": "사격 후 이동 가능",
+        "width": 25,
+        "image": "",
+        "type": "button",
+        "actionType": "toggle",
+        "requires": {
+          "tags": "기관단총"
+        },
+        "hidden": true
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "고유개조"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "Frag-17",
+            "hidden": true
+          },
+          {
+            "type": "setValue",
+            "target": "point",
+            "value": "-5"
+          },
+          {
+            "type": "setValue",
+            "target": "damage_dice_count",
+            "value": "1"
+          }
+        ],
+        "title": "Frag-17",
+        "text": "무기 주사위를 4d4로 대체",
+        "width": 25,
+        "image": "",
+        "type": "button",
+        "actionType": "toggle",
+        "requires": {
+          "tags": "산탄총"
+        },
+        "hidden": true
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "고유개조"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "영거리 사격",
+            "hidden": true
+          },
+          {
+            "type": "setValue",
+            "target": "point",
+            "value": "-3"
+          }
+        ],
+        "title": "영거리 사격",
+        "text": "거리가 0인 적을 명중 시\n치명타 확률 100%",
+        "width": 25,
+        "image": "",
+        "type": "button",
+        "actionType": "toggle",
+        "requires": {
+          "tags": "산탄총"
+        },
+        "hidden": true
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "고유개조"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "하부유탄",
+            "hidden": true
+          },
+          {
+            "type": "setValue",
+            "target": "point",
+            "value": "-3"
+          }
+        ],
+        "title": "하부유탄",
+        "text": "5d8 유탄발사기 부착(2발)",
+        "width": 25,
+        "image": "",
+        "type": "button",
+        "actionType": "toggle",
+        "requires": {
+          "tags": "소총"
+        },
+        "hidden": true
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "고유개조"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "건스미스",
+            "hidden": true
+          },
+          {
+            "type": "setValue",
+            "target": "point",
+            "value": "-3"
+          },
+          {
+            "type": "setValue",
+            "target": "max_perk_count",
+            "value": 2,
+            "operation": "+"
+          }
+        ],
+        "title": "건스미스",
+        "text": "개조 2개 추가 선택 가능",
+        "width": 25,
+        "image": "",
+        "type": "button",
+        "actionType": "toggle",
+        "requires": {
+          "tags": "소총"
+        },
+        "hidden": true
+      }
+      
+    ],
+    "maxSelect": 1
+    
+  },
+  "weapon_perk": {
+    "name": "개조",
+    "description": "최대 개조 항목 수 : 2",
+    "elements": [
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "개조"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "단축형_노리쇠",
+            "hidden": true
+          }
+        ],
+        "title": "단축형 노리쇠",
+        "text": "탄약 2개를 추가로 소모하여 1회 추가 공격",
+        "width": 20,
+        "image": "",
+        "type": "button",
+        "actionType": "toggle"
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "개조"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "잔혹함",
+            "hidden": true
+          }
+        ],
+        "title": "잔혹함",
+        "text": "피해 굴림 시\n값이 1 이하인 주사위 재굴림",
+        "width": 20,
+        "image": "",
+        "type": "button",
+        "actionType": "toggle"
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "개조"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "대용량_탄창",
+            "hidden": true
+          },
+          {
+            "type": "setValue",
+            "target": "ammo",
+            "value": "2",
+            "hidden": true
+          }
+        ],
+        "title": "대용량 탄창",
+        "text": "장탄수 +2",
+        "width": 20,
+        "image": "",
+        "type": "button",
+        "actionType": "toggle"
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "개조"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "고성능_조준기",
+            "hidden": true
+          },
+          {
+            "type": "setValue",
+            "target": "crit",
+            "value": 2,
+            "operation": "multiply"
+          }
+        ],
+        "title": "고성능 조준기",
+        "text": "치명타 확률 두배",
+        "width": 20,
+        "image": "",
+        "type": "button",
+        "actionType": "toggle"
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "개조"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "피로파괴",
+            "hidden": true
+          }
+        ],
+        "title": "피로파괴",
+        "text": "적에게 피해를 입힐 때마다\n장갑 -1",
+        "width": 20,
+        "image": "",
+        "type": "button",
+        "actionType": "toggle"
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "개조"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "은밀함",
+            "hidden": true
+          }
+        ],
+        "title": "은밀함",
+        "text": "소음기, 아음속 탄환 깜직한 크기 등\n 은밀행동에 적합합니다.",
+        "width": 20,
+        "image": "",
+        "type": "button",
+        "actionType": "toggle"
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "개조"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "퀵드로 탄창",
+            "hidden": true
+          }
+        ],
+        "title": "퀵드로 탄창",
+        "text": "매 전투마다 한번 주요 행동을 소모하지 않고\n 재장전합니다.",
+        "width": 20,
+        "image": "",
+        "type": "button",
+        "actionType": "toggle"
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "개조"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "확산",
+            "hidden": true
+          }
+        ],
+        "title": "확산",
+        "text": "밀집되어 있는 적을 처리하기 좋습니다.",
+        "width": 20,
+        "image": "",
+        "type": "button",
+        "actionType": "toggle"
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "개조"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "능동_반동_제어",
+            "hidden": true
+          }
+        ],
+        "title": "능동 반동 제어",
+        "text": "공격이 빗나갔을 때\n다음 명중 굴림을 유리하게 굴림",
+        "width": 20,
+        "image": "",
+        "type": "button",
+        "actionType": "toggle"
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "개조"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "타겟팅_포드",
+            "hidden": true
+          }
+        ],
+        "title": "타겟팅 포드",
+        "text": "피해를 입은 적을 공격할 때\n명중 굴림에 +2",
+        "width": 20,
+        "image": "",
+        "type": "button",
+        "actionType": "toggle"
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "개조"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "R.I.P",
+            "hidden": true
+          }
+        ],
+        "title": "R.I.P",
+        "text": "치명타 발생 시\n무기 주사위 하나 추가",
+        "width": 20,
+        "image": "",
+        "type": "button",
+        "actionType": "toggle"
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "개조"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "대구경_탄환",
+            "hidden": true
+          },
+          {
+            "type": "setValue",
+            "target": "damage_dice_sides",
+            "value": "2",
+            "hidden": true
+          }
+        ],
+        "title": "대구경 탄환",
+        "text": "무기 주사위 최대값 +2\nex) 1d6 => 1d8",
+        "width": 20,
+        "image": "",
+        "type": "button",
+        "actionType": "toggle"
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "개조"
+          },
+          {
+            "type": "setValue",
+            "target": "rangeMin",
+            "value": "-1",
+            "hidden": true
+          }
+        ],
+        "title": "레이저 포인트",
+        "text": "최저 사거리 -1",
+        "width": 20,
+        "image": "",
+        "type": "button",
+        "actionType": "toggle"
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "개조"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "절약형_트리거",
+            "hidden": true
+          }
+        ],
+        "title": "절약형 트리거",
+        "text": "빗나갔을 때 50% 확률로\n탄환 소모 X",
+        "width": 20,
+        "image": "",
+        "type": "button",
+        "actionType": "toggle"
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "개조"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "모잠비크 드릴",
+            "hidden": true
+          }
+        ],
+        "title": "모잠비크 드릴",
+        "text": "거리가 0인 적을 명중 시\n해당 적을 실명으로 만듭니다.",
+        "width": 20,
+        "image": "",
+        "type": "button",
+        "actionType": "toggle"
+      },
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "개조"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "애장품",
+            "hidden": true
+          },
+          {
+            "type": "setValue",
+            "target": "max_perk_count",
+            "value": "2",
+            "operation": "+",
+            "hidden": true
+          },
+          {
+            "type": "setValue",
+            "target": "point",
+            "value": "-5",
+            "hidden": true
+          }
+        ],
+        "title": "애장품",
+        "text": "개조 추가 선택 가능",
+        "width": 20,
+        "image": "",
+        "type": "button",
+        "actionType": "toggle"
+      }
+    ]
+  },
+  "weapon_flaw": {
+    "name": "취약점",
+    "description": "취약점 당 추가 개조 선택 가능\n최대 취약점 항목 수 : 2",
+    "elements": [
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "취약점"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "거치 필요",
+            "hidden": true
+          },
+          {
+            "type": "setValue",
+            "target": "max_perk_count",
+            "value": 1,
+            "operation": "+",
+            "hidden": true
+          }
+
+        ],
+        "title": "거치 필요",
+        "text": "이동 후 주무기 공격을 할 수 없습니다.",
+        "width": 20,
+        "image": "",
+        "type": "button",
+        "actionType": "toggle"
+      },      
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "취약점"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "거추장스러움",
+            "hidden": true
+          },
+          {
+            "type": "setValue",
+            "target": "max_perk_count",
+            "value": 1,
+            "operation": "+",
+            "hidden": true
+          },
+          {
+            "type": "setValue",
+            "target": "rangeMin",
+            "value": 1,
+            "hidden": true
+          }
+
+        ],
+        "title": "거추장스러움",
+        "text": "최저 사거리 +1",
+        "width": 20,
+        "image": "",
+        "type": "button",
+        "actionType": "toggle"
+      },      
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "취약점"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "거추장스러움",
+            "hidden": true
+          },
+          {
+            "type": "setValue",
+            "target": "max_perk_count",
+            "value": 1,
+            "operation": "+",
+            "hidden": true
+          },
+          {
+            "type": "setValue",
+            "target": "rangeMax",
+            "value": -1,
+            "hidden": true
+          }
+
+        ],
+        "title": "짧은 사거리",
+        "text": "최대 사거리 -1",
+        "width": 20,
+        "image": "",
+        "type": "button",
+        "actionType": "toggle"
+      },      
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "취약점"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "정비 불량",
+            "hidden": true
+          },
+          {
+            "type": "setValue",
+            "target": "max_perk_count",
+            "value": 1,
+            "operation": "+",
+            "hidden": true
+          },
+          {
+            "type": "setValue",
+            "target": "aim",
+            "value": -2,
+            "hidden": true
+          }
+
+        ],
+        "title": "정비 불량",
+        "text": "명중 보정 -2",
+        "width": 20,
+        "image": "",
+        "type": "button",
+        "actionType": "toggle"
+      },      
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "취약점"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "탄자 붕괴",
+            "hidden": true
+          },
+          {
+            "type": "setValue",
+            "target": "max_perk_count",
+            "value": 1,
+            "operation": "+",
+            "hidden": true
+          },
+          {
+            "type": "setValue",
+            "target": "damage_dice_sides",
+            "value": -2,
+            "hidden": true
+          }
+
+        ],
+        "title": "탄자 붕괴",
+        "text": "무기 주사위 최대값 -2\nex) 1d8 => 1d6",
+        "width": 20,
+        "image": "",
+        "type": "button",
+        "actionType": "toggle"
+      },      
+      {
+        "events": [
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "취약점"
+          },
+          {
+            "type": "setValue",
+            "target": "tags",
+            "value": "송탄 불량",
+            "hidden": true
+          },
+          {
+            "type": "setValue",
+            "target": "max_perk_count",
+            "value": 1,
+            "operation": "+",
+            "hidden": true
+          }
+
+        ],
+        "title": "송탄 불량",
+        "text": "발사시 일정 확률로 탄약 추가 소모",
+        "width": 20,
+        "image": "",
+        "type": "button",
+        "actionType": "toggle"
+      }
+    ]
+  }
+}

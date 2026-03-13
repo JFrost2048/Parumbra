@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b9d421d8cc4fdf42ad1077cd3c8bf73, type: 3}
+  m_Name: M4
+  m_EditorClassIdentifier: Assembly-CSharp::TacticsGrid.WeaponDef
+  displayName: M4
+  uiIcon: {fileID: 21300000, guid: 91dbb5d6052ca114f9cb60217abbd956, type: 3}
+  ammoTypeId: Shell
+  magazineSize: 5
+  attacks:
+  - attack: {fileID: 11400000, guid: b8f19b43ef8cf644ab816b833addfee3, type: 2}
+    ammoPerUse: 2
+    consumesAmmo: 1
+    uiSlot: 0
+  - attack: {fileID: 11400000, guid: f5a7c745054a38241ae900d7e363f3f9, type: 2}
+    ammoPerUse: 0
+    consumesAmmo: 1
+    uiSlot: 0

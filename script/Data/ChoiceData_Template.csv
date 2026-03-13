@@ -1,0 +1,3 @@
+﻿group,title,description,image,pointCost,internalTag,event1_type,event1_target,event1_value,event1_hidden,event2_type,event2_target,event2_value,event2_hidden
+출신,레바브 출신,도시 중심에서 자란 당신은 기계 소리에 익숙합니다,rachel,2,origin_levav,setValue,tags,origin_levav,False,pointEffect,affection_Rachel,-5,False
+출신,아르고 출신,강철과 기름냄새 속에서 자란 당신은 강인한 체력을 가졌습니다,schmitz,1,origin_argo,setValue,tags,origin_argo,False,pointEffect,affection_Schmitz,+5,False

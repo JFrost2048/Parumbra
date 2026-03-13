@@ -1,0 +1,229 @@
+{
+  "entryBlockId": "intro",
+  "blocks": [
+    {
+      "id": "intro",
+      "lines": [
+        { "speaker": "의사","speakerId": "Medea", "text": "깨어나셨군요." },
+        { "speaker": "의사", "text": "설명드릴 게 있어요." },
+        { "speaker": "메데이아","speakerId": "Medea", "text": "저도 잠깐 끼도록 하죠." },
+        { "speaker": "빅터","speakerId": "Victor", "text": "나도 잊지 말라고~!" }
+      ],
+      "choices": [
+        { "id": "ask1", "text": "무슨 일이죠?", "nextBlockId": "explain3" },
+        { "id": "ask2", "text": "이게 무슨..", "nextBlockId": "explain2" },
+        { "id": "ask3", "text": "말도 안돼요.", "nextBlockId": "explain" }
+      ]
+    },
+    {
+      "id": "explain",
+      "lines": [
+        { "speaker": "의사", "text": "사고 이후로 기억에 공백이 있습니다." }
+      ],
+      "choices": [
+        { "id": "mem_ask1", "text": "사고요? 무슨 사고죠?", "nextBlockId": "accident_info" },
+        { "id": "mem_ask2", "text": "아무것도 기억나지 않아요...", "nextBlockId": "calm_down" }
+      ]
+    },
+    {
+      "id": "explain2",
+      "lines": [
+        { "speaker": "의사", "text": "여기는 병원입니다. 며칠 전 큰 사고가 있었어요." }
+      ],
+      "choices": [
+        { "id": "hosp_ask1", "text": "사고라니요?", "nextBlockId": "accident_info" },
+        { "id": "hosp_ask2", "text": "몸이... 움직이지 않아요.", "nextBlockId": "check_body" }
+      ]
+    },
+    {
+      "id": "explain3",
+      "lines": [
+        { "speaker": "의사", "text": "저를 믿으셔야 해요." },
+        { "speaker": "의사", "text": "지금부터 제 말에 집중해 주세요." }
+      ],
+      "choices": [
+        { "id": "trust_ask1", "text": "대체 무슨 일이 있었던 거죠?", "nextBlockId": "accident_info" },
+        { "id": "trust_ask2", "text": "여긴 어디죠? 당신은 누구죠?", "nextBlockId": "who_are_you" }
+      ]
+    },
+    {
+      "id": "accident_info",
+      "lines": [
+        { "speaker": "의사", "text": "차량 전복 사고였습니다." },
+        { "speaker": "의사", "text": "발견되었을 때 의식이 없으셨어요." }
+      ],
+      "choices": [
+        { "id": "acc_ask1", "text": "저... 저 혼자였나요?", "nextBlockId": "alone_question" },
+        { "id": "acc_ask2", "text": "왜 기억이 안 나죠?", "nextBlockId": "calm_down" }
+      ]
+    },
+    {
+      "id": "calm_down",
+      "lines": [
+        { "speaker": "의사", "text": "뇌에 충격이 가해져서 생긴 일시적 기억 상실일 수 있습니다." },
+        { "speaker": "의사", "text": "흥분하시면 안 됩니다. 천천히 호흡하세요." }
+      ],
+      "choices": [
+        { "id": "calm_ask1", "text": "제 이름은... 뭐죠?", "nextBlockId": "name_question" },
+        { "id": "calm_ask2", "text": "가족들은요? 제 가족은...", "nextBlockId": "family_question" }
+      ]
+    },
+    {
+      "id": "check_body",
+      "lines": [
+        { "speaker": "의사", "text": "다행히 큰 외상은 없지만, 아직 안정이 필요합니다." },
+        { "speaker": "의사", "text": "움직이려 하지 마세요." }
+      ],
+      "choices": [
+        { "id": "body_1", "text": "하지만... 아무 감각이 없어요.", "nextBlockId": "body_panic" },
+        { "id": "body_2", "text": "알겠습니다... (가만히 있는다)", "nextBlockId": "body_wait" }
+      ]
+    },
+    {
+      "id": "who_are_you",
+      "lines": [
+        { "speaker": "의사", "text": "저는 환자분의 주치의, 김민준입니다." },
+        { "speaker": "의사", "text": "여기는 서울 중앙 병원이고요." }
+      ],
+      "choices": [
+        { "id": "who_ask1", "text": "전... 얼마나 여기 있었죠?", "nextBlockId": "how_long" }
+      ]
+    },
+    {
+      "id": "alone_question",
+      "lines": [
+        { "speaker": "의사", "text": "..." },
+        { "speaker": "의사", "text": "동승자가 있었습니다." }
+      ],
+      "choices": [
+        { "id": "alone_1", "text": "누... 누구죠? 그 사람은 괜찮아요?", "nextBlockId": "passenger_status_ask" },
+        { "id": "alone_2", "text": "(두려워 침묵한다)", "nextBlockId": "passenger_silent" }
+      ]
+    },
+    {
+      "id": "name_question",
+      "lines": [
+        { "speaker": "의사", "text": "기억나지 않으십니까?" },
+        { "speaker": "의사", "text": "차트에는..." }
+      ],
+      "choices": [
+        { "id": "name_1", "text": "제 이름이... 뭔가요?", "nextBlockId": "name_reveal" },
+        { "id": "name_2", "text": "모르겠어요. 정말 아무것도...", "nextBlockId": "name_comfort" }
+      ]
+    },
+    {
+      "id": "family_question",
+      "lines": [
+        { "speaker": "의사", "text": "지금 밖에서 기다리고 계십니다." },
+        { "speaker": "의사", "text": "보호자분, 들어오시라고 할까요?" }
+      ],
+      "choices": [
+        { "id": "family_1", "text": "네, 들여보내 주세요.", "nextBlockId": "family_enter" },
+        { "id": "family_2", "text": "아니요, 잠시만요. 아직...", "nextBlockId": "family_wait" }
+      ]
+    },
+    {
+      "id": "how_long",
+      "lines": [
+        { "speaker": "의사", "text": "오늘로 사흘째입니다." }
+      ],
+      "choices": [
+        { "id": "time_1", "text": "사흘이나... 의식이 없었다고요?", "nextBlockId": "time_shock" },
+        { "id": "time_2", "text": "무슨 요일이죠, 오늘이?", "nextBlockId": "time_day" }
+      ]
+    },
+    {
+      "id": "body_panic",
+      "lines": [
+        { "speaker": "의사", "text": "진정하세요. 마취와 충격 때문에 그럴 수 있습니다." },
+        { "speaker": "의사", "text": "감각은 곧 돌아올 겁니다." }
+      ],
+      "choices": []
+    },
+    {
+      "id": "body_wait",
+      "lines": [
+        { "speaker": "의사", "text": "좋습니다. 안정을 취하세요. 곧 다시 오겠습니다." }
+      ],
+      "choices": []
+    },
+    {
+      "id": "passenger_status_ask",
+      "lines": [
+        { "speaker": "의사", "text": "..." },
+        { "speaker": "의사", "text": "환자분, 지금은 본인 회복에만 집중하셔야 합니다." }
+      ],
+      "choices": [
+        { "id": "insist_1", "text": "제발 알려주세요! 제발!", "nextBlockId": "passenger_reveal_critical" }
+      ]
+    },
+    {
+      "id": "passenger_silent",
+      "lines": [
+        { "speaker": "의사", "text": "기억을 더듬어보시겠어요? 누가 함께 탔는지..." }
+      ],
+      "choices": []
+    },
+    {
+      "id": "passenger_reveal_critical",
+      "lines": [
+        { "speaker": "의사", "text": "(한숨을 쉰다)" },
+        { "speaker": "의사", "text": "지금 중환자실에 있습니다. 상태가... 좋지 않아요." }
+      ],
+      "choices": []
+    },
+    {
+      "id": "name_reveal",
+      "lines": [
+        { "speaker": "의사", "text": "차트에 따르면... 환자분 성함은 '김지수' 님입니다." }
+      ],
+      "choices": [
+        { "id": "name_react_1", "text": "'김지수'...", "nextBlockId": "name_react_strange" }
+      ]
+    },
+    {
+      "id": "name_comfort",
+      "lines": [
+        { "speaker": "의사", "text": "괜찮습니다. 기억은 천천히 돌아올 겁니다. 조급해하지 마세요." }
+      ],
+      "choices": []
+    },
+    {
+      "id": "name_react_strange",
+      "lines": [
+        { "speaker": "의사", "text": "낯설게 들리시나요?" }
+      ],
+      "choices": []
+    },
+    {
+      "id": "family_enter",
+      "lines": [
+        { "speaker": "의사", "text": "알겠습니다. 간호사에게 전달하죠." },
+        { "text": "(의사가 나가고, 곧 문이 열리는 소리와 함께 흐느끼는 목소리가 들린다.)" }
+      ],
+      "choices": []
+    },
+    {
+      "id": "family_wait",
+      "lines": [
+        { "speaker": "의사", "text": "그러시죠. 마음의 준비가 되면 다시 불러 주세요." }
+      ],
+      "choices": []
+    },
+    {
+      "id": "time_shock",
+      "lines": [
+        { "speaker": "의사", "text": "네. 중환자실에 계시다가 오늘 아침 일반 병실로 옮기셨습니다." },
+        { "speaker": "의사", "text": "상태가 많이 안정되신 거예요." }
+      ],
+      "choices": []
+    },
+    {
+      "id": "time_day",
+      "lines": [
+        { "speaker": "의사", "text": "오늘은... (잠시 차트를 본다) 10월 28일, 화요일입니다." }
+      ],
+      "choices": []
+    }
+  ]
+}

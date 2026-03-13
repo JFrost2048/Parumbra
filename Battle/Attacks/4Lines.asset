@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07560dcfaa59aad4c80718c7ba8d2005, type: 3}
+  m_Name: 4Lines
+  m_EditorClassIdentifier: Assembly-CSharp::TacticsGrid.AttackDef
+  displayName: Attack
+  pattern: 1
+  range: 4
+  damage: 3
+  overlayColor: {r: 1, g: 0.2, b: 0.2, a: 0.35}
+  apCost: 1
+  usesEquippedWeaponAmmo: 1
+  ammoPerUse: 1
+  uiSlot: 0
+  icon: {fileID: -6142374563283994760, guid: d0ed450699f386c48810beb76a8a3e07, type: 3}
+  iconAlt: {fileID: 0}
