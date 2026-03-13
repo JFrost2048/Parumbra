@@ -1,0 +1,12 @@
+# Large binaries and generated assets
+StreamingAssets/undreamai-v1.2.6-llamacpp/
+TextMesh Pro/Fonts/
+TextMesh Pro/Resources/Fonts & Materials/
+
+# Build artifacts
+Library/
+Temp/
+Obj/
+Build/
+Builds/
+Logs/
